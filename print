@@ -1,0 +1,18 @@
+pipeline {
+    agent {
+        label 'master'
+            }
+
+    stages {
+        stage('Print') {
+            steps {
+                echo "Build No: ${BUILD_ID}"
+                echo "Jenkins Url: ${JENKINS_URL}"
+                echo "Job Url: ${JOB_URL}"
+                echo "Git Url: ${GIT_URL}"
+                echo "Git Branch: ${GIT_BRANCH}"
+                echo "Build User: ${BUILD_USER}"
+            }
+        }
+    }
+}
