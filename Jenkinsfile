@@ -11,6 +11,12 @@ pipeline {
                  echo "Git Previous Commit: ${GIT_PREVIOUS_COMMIT}"
                  echo "Git Branch: ${GIT_BRANCH}"
                  echo "Git Author Name: ${GIT_AUTHOR_NAME}"
+                 echo "Build No: ${BUILD_ID}"
+                 echo "Job Url: ${JOB_DISPLAY_URL}"
+                 echo "Job Name: ${JOB_NAME}"
+                 echo "Build display name: ${BUILD_DISPLAY_NAME}"
+                 echo  Build User: ${BUILD_USER:-jenkins} >> var
+                 echo "Build User: ${BUILD_USER}"
                  '''
             }
         }
