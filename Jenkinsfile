@@ -15,8 +15,9 @@ pipeline {
                  echo "Job Url: ${JOB_DISPLAY_URL}"
                  echo "Job Name: ${JOB_NAME}"
                  echo "Build display name: ${BUILD_DISPLAY_NAME}"
-                 echo  Build User: ${BUILD_USER:-jenkins} >> var
                  echo "Build User: ${BUILD_USER}"
+                 echo "Full Name: $BUILD_USER"
+                 echo "User id: $BUILD_USER_ID"
                  '''
             }
         }
